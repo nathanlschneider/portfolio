@@ -1,0 +1,29 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio fullstack app for my website",
+  "main": "portfolio.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nathanlschneider/portfolio.git"
+  },
+  "keywords": [
+    "portfolio",
+    "javascript",
+    "node",
+    "css",
+    "html5"
+  ],
+  "author": "Nathan Schneider",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nathanlschneider/portfolio/issues"
+  },
+  "homepage": "https://github.com/nathanlschneider/portfolio#readme"
+}
