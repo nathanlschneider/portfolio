@@ -2,7 +2,7 @@ html {
     background-color: #232323;
 }
 
-#container {
+#logoContainer {
     position: absolute;
     display: flex;
     margin-left: 50px;
