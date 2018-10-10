@@ -1,0 +1,107 @@
+html {
+    background-color: #232323;
+}
+
+#container {
+    position: absolute;
+    display: flex;
+    margin-left: 50px;
+}
+
+.block {
+    transform: skew(-20deg)
+}
+
+#myName {
+    color: white;
+    position: absolute;
+    font-family: 'Archivo Black', sans-serif;
+    letter-spacing: -40px;
+    font-size: 290px;
+    transform: skew(-20deg);
+    left: 285px;
+    top: -55px;
+    animation: fadeIn 3s;
+}
+
+#firstBlock {
+    position: relative;
+    height: 200px;
+    width: 100px;
+    background-color: grey;
+    animation: firstBlock .25s;
+
+}
+
+#secondBlock {
+    position: relative;
+    height: 200px;
+    width: 100px;
+    background-color: lightgrey;
+    animation: secondBlock .5s;
+}
+
+#thirdBlock {
+    position: relative;
+    height: 200px;
+    width: 100px;
+    background-color: orange;
+    animation: thirdBlock .75s;
+}
+
+.period {
+    position: relative;
+    color: orange;
+    font-size: 200px;
+    animation: slideIn 1.5s;
+}
+
+
+@keyframes firstBlock {
+    0% {
+            left: -300px;
+    }
+
+    100% {
+            left: 0px;
+    }
+}
+
+@keyframes secondBlock {
+    0% {
+            left: -500px;
+    }
+
+    100% {
+            left: 0px;
+    }
+}
+
+@keyframes thirdBlock {
+    0% {
+            left: -700px;
+    }
+
+    100% {
+            left: 0px;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+            opacity: 0;
+    }
+    100% {
+            opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+            top: -300px;
+    }
+
+    100% {
+            top: 0px;
+    }
+}
