@@ -2,6 +2,12 @@ html {
     background-color: #232323;
 }
 
+
+header {
+    background-color: #232323;
+
+}
+
 #logoContainer {
     position: absolute;
     display: flex;
@@ -30,7 +36,6 @@ html {
     width: 100px;
     background-color: grey;
     animation: firstBlock .25s;
-
 }
 
 #secondBlock {
@@ -56,52 +61,32 @@ html {
     animation: slideIn 1.5s;
 }
 
+#contents {
+    
+    background-color: lightgray;
+}
 
-@keyframes firstBlock {
-    0% {
-            left: -300px;
-    }
-
-    100% {
-            left: 0px;
-    }
+/* @keyframes firstBlock {
+    0%   { left: -300px; }
+    100% { left: 0px; }
 }
 
 @keyframes secondBlock {
-    0% {
-            left: -500px;
-    }
-
-    100% {
-            left: 0px;
-    }
+    0%   { left: -500px; }
+    100% { left: 0px; }
 }
 
 @keyframes thirdBlock {
-    0% {
-            left: -700px;
-    }
-
-    100% {
-            left: 0px;
-    }
+    0%   { left: -700px; }
+    100% { Left: 0px; }
 }
 
 @keyframes fadeIn {
-    0% {
-            opacity: 0;
-    }
-    100% {
-            opacity: 1;
-    }
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 @keyframes slideIn {
-    0% {
-            top: -300px;
-    }
-
-    100% {
-            top: 0px;
-    }
-}
+    0%   { top: -300px; }
+    100% { top: 0px; }
+} */
