@@ -6,6 +6,7 @@ const app = (function() {
     let menuButton = document.getElementById('menuButton');
     let letters = document.querySelectorAll('.secondary');
     let space = document.querySelector('.space');
+    let cover = document.querySelector('.cover');
 
     window.addEventListener("scroll", function (event) {
         var scroll = this.scrollY;
@@ -28,7 +29,7 @@ const app = (function() {
       
         if (window.getComputedStyle(menuButton).opacity > 0) {
         nav.classList.toggle('drop');
-
+        cover.classList.toggle('section-blackout');
         }
     })
    

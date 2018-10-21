@@ -1,70 +1,124 @@
-  html,
-  body {
-    margin: 0;
-  }
-  .shrink {
-    width: 130px;
-    margin-left: 100px;
-  }
-  nav {
-    overflow: hidden;
-    background-color: rgba(209, 209, 209, 0.863);
-    position: fixed;
-    width: 100%;
-    height: 60px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    transition: 0.5s;
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.329);
-  }
+html,
+body {
+  margin: 0;
+}
 
-  #logo {
-    display: flex;
-    flex-direction: row;
-    font-family: "IBM Plex Sans", sans-serif;
-    font-weight: 700;
-    font-style: italic;
-    font-size: 42px;
-  }
+/* navbar contents */
 
-  .fade {
-    opacity: 0;
-    max-width: 0 !important;
-  }
+nav {
+  overflow: hidden;
+  background-color: rgba(236, 236, 236, 0.863);
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  transition: 0.5s;
+  text-shadow: 1px 10px 40px rgba(0, 0, 0, 0.473);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.473);
+}
 
-  .secondary {
-    transition: all 0.5s;
-    max-width: 42px;
-  }
+#logo {
+  color: #232323;
+  display: flex;
+  flex-direction: row;
+  font-family: "Work Sans", Sans-Serif;
+  font-size: 45px;
+  font-weight: 100;
+  /* font-style: italic; */
+  /* font-size: 42px; */
+}
 
-  .initial {
-    transition: all 0.5s;
-  }
-  .space {
-    padding-left: 7px;
-  }
+.cheeseburger {
+  width: 35px;
+  height: 2px;
+  background-color: #232323;
+  margin: 8px 0;
+}
 
-  #menuButton {
-    transition: 0.5s;
-    opacity: 0;
-  }
+.secondary {
+  /* non-initial letter styling */
+  transition: all 0.5s;
+  max-width: 42px;
+}
 
-  .drop {
-    height: 500px;
-    flex-direction: column;
-    justify-content: flex-end;
-  }
-  .show {
-    opacity: 1 !important;
-  }
-  .cheeseburger {
-    width: 35px;
-    height: 3px;
-    background-color: black;
-    margin: 6px 0;
-  }
-  section {
-    height: 100vh;
-  }
+.initial {
+  /* initial letters */
+  transition: all 0.5s;
+}
+
+.space {
+  /* spacing between first and last name */
+  padding-left: 7px;
+}
+
+#menuButton {
+  transition: 0.5s;
+  opacity: 0;
+}
+
+/* body contents sections */
+
+.cover {
+  /* blackout layer */
+  transition: all 1s;
+}
+
+section {
+  height: 100vh;
+}
+
+section:nth-of-type(5) {
+  background-image: linear-gradient(
+    to left bottom,
+    #ffffff,
+    #f7f7f7,
+    #efefef,
+    #e8e8e8,
+    #e0e0e0
+  );
+}
+
+section:nth-of-type(4) {
+  /* background-image: url("https://images.unsplash.com/photo-1539984414737-80b7ddd0c298?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cb890d9ee53705aead856b7041422250&auto=format&fit=crop&w=2555&q=80"); */
+}
+
+section:nth-of-type(1) {
+  /* background-image: url("https://images.unsplash.com/photo-1539960679462-826cbf496d4c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fccccd038a0484afb0a3286b4ac0079d&auto=format&fit=crop&w=2550&q=80"); */
+}
+
+/* animation compentnts */
+
+.shrink {
+  /* shrinks nav bar */
+  width: 130px;
+  margin-left: 100px;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.fade {
+  /* fades secondary letters during shrink */
+  opacity: 0;
+  max-width: 0 !important;
+}
+
+.drop {
+  /* creates menu drop */
+  height: 500px;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.section-blackout {
+  background-color: #00000030;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+}
+
+.show {
+  opacity: 1 !important;
+}
