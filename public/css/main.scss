@@ -8,7 +8,7 @@ html {
   background-color: white;
 }
 body {
-  overflow: hidden;
+  overflow-x: hidden;
   margin: 0;
   background-color: #232323;
   width: 100vw;
@@ -84,10 +84,12 @@ nav {
       //background-color: red;
     }
     .underline {
+      position: relative;
       background-color: #232323;
-      height: 2px;
+      height: 3px;
       transform: scaleX(0) translateY(4px);
-      transition: 0.5s;
+      transition: all 0.5s;
+      box-shadow: 1px 1px 1px #5c5c5c;
     }
   }
 }
@@ -97,8 +99,10 @@ nav {
 }
 
 .active {
-  background-color: hotpink !important;
-  transition: none !important;
+  //   background-color: hotpink !important;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(252, 82, 69, 1) 100%);
+  //transition: none !important;
 }
 
 section {

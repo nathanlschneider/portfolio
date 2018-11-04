@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
   margin: 0;
   background-color: #232323;
   width: 100vw;
@@ -105,12 +105,15 @@ nav .linkWrapper div {
 }
 
 nav .linkWrapper .underline {
+  position: relative;
   background-color: #232323;
-  height: 2px;
+  height: 3px;
   -webkit-transform: scaleX(0) translateY(4px);
           transform: scaleX(0) translateY(4px);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-box-shadow: 1px 1px 1px #5c5c5c;
+          box-shadow: 1px 1px 1px #5c5c5c;
 }
 
 .growLine {
@@ -119,9 +122,9 @@ nav .linkWrapper .underline {
 }
 
 .active {
-  background-color: hotpink !important;
-  -webkit-transition: none !important;
-  transition: none !important;
+  background: #833ab4;
+  background: -webkit-gradient(linear, left top, right top, from(#833ab4), to(#fc5245));
+  background: linear-gradient(90deg, #833ab4 0%, #fc5245 100%);
 }
 
 section {
