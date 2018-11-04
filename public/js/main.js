@@ -1,38 +1,58 @@
-"use strict";
+'use strict';
 
 const app = (function() {
+  let firstLoad = true;
+  let nav = document.getElementById('nav');
+  let load = document.getElementById('load');
+  let b1 = document.getElementById('b1');
+  let b2 = document.getElementById('b2');
+  let cover = document.getElementById('cover');
+  let logo = document.getElementById('logo');
+  let name = document.getElementById('name');
+  let line = document.getElementById('line');
+  let firstName = document.getElementById('firstName');
+  let lastName = document.getElementById('lastName');
+  let menu = document.getElementById('menu');
+  let about = document.getElementById('about');
+  let links = document.querySelector('linkWrapper');
 
-    let nav = document.getElementById('nav');
-    let menuButton = document.getElementById('menuButton');
-    let letters = document.querySelectorAll('.secondary');
-    let space = document.querySelector('.space');
-    let cover = document.querySelector('.cover');
+  let logoPos = logo.getBoundingClientRect();
+  logoPos = logo.getBoundingClientRect();
+  cover.style.left = logoPos.right - 140 + 'px';
 
-    window.addEventListener("scroll", function (event) {
-        var scroll = this.scrollY;
-        if (scroll > 100) { 
-            nav.classList.add('shrink');
-            menuButton.classList.add('show');
-            space.classList.remove('space');
-            letters.forEach(letter => letter.classList.add('fade'))
-        } else {
-            nav.classList.remove('shrink');
-            nav.classList.remove('drop');
-            menuButton.classList.remove('show');
-            space.classList.add('space');
-            letters.forEach(letter => letter.classList.remove('fade'))
+  window.addEventListener('resize', e => {
+    logoPos = logo.getBoundingClientRect();
+    cover.style.left = logoPos.right - 140 + 'px';
+  });
 
-        }
-    });
+  window.addEventListener('load', e => {
+    logoPos = logo.getBoundingClientRect();
+    cover.style.left = logoPos.right - 140 + 'px';
+    logo.classList.add('slideDown');
+    line.classList.add('slideUp');
+    name.classList.add('slideIn');
+  });
 
-    menuButton.addEventListener('click', e => {
-      
-        if (window.getComputedStyle(menuButton).opacity > 0) {
-        nav.classList.toggle('drop');
-        cover.classList.toggle('section-blackout');
-        }
-    })
-   
+  window.addEventListener('scroll', e => {
+    console.log(scrollY);
+    if (scrollY < 900 && firstLoad === false) {
+      line.classList.add('lineFold');
+      line.classList.remove('lineUnFold');
+      name.classList.remove('slideOut');
+      name.classList.add('slideInAndDelay');
+      nav.classList.remove('shrinkNavBar');
+    }
+    if (scrollY > 900) {
+      firstLoad = false;
+      line.classList.remove('lineFold');
+      line.classList.add('lineUnFold');
+      name.classList.add('slideOut');
+      nav.classList.add('shrinkNavBar');
+      links.style.opacity = 1;
+    }
+  });
 
-
+  line.addEventListener('click', e => {
+    menu.classList.toggle('dropMenu');
+  });
 })();

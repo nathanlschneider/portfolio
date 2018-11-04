@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
+$animationTime: 1s;
+$delayTime: 300ms;
+$translate: 15px;
+$navHeight: 50px;
+
+html {
+  background-color: white;
+}
+body {
+  margin: 0;
+  background-color: #232323;
+  width: 100vw;
+  height: 100vh;
+}
+
+nav {
+  position: fixed;
+  width: 100vw;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  height: $navHeight;
+  justify-content: center;
+  align-items: center;
+  background-color: silver;
+  z-index: 1;
+  overflow: hidden;
+
+  .logoWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 0 60px;
+  }
+
+  #logo {
+    font-size: 45px;
+    z-index: 4;
+    //background-color: red;
+    //position: fixed;
+  }
+
+  #cover {
+    width: 150px;
+    height: 45px;
+    background-color: silver;
+    position: absolute;
+    z-index: 3;
+  }
+
+  #line {
+    display: flex;
+    justify-content: space-between;
+    align-items: initial;
+    height: 42px;
+    width: 2px;
+    margin: 10px;
+    z-index: 10;
+  }
+
+  #name {
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+  }
+
+  #name span {
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+
+  .linkWrapper {
+    display: flex;
+    margin: 0 60px 0 0;
+
+    div {
+      font-size: 18px;
+      font-weight: 300;
+      padding: 20px;
+      cursor: pointer;
+      transition: 0.8s;
+    }
+
+    div:hover {
+    }
+  }
+}
+section {
+  height: 100vh;
+}
+
+.bar {
+  width: 2px;
+  //height: 45px;
+  background-color: #000000;
+}
+
+.slideIn {
+  animation: $animationTime 0.7s slideIn;
+  animation-fill-mode: both;
+}
+
+.slideInAndDelay {
+  animation: $animationTime 1.2s slideIn;
+  animation-fill-mode: both;
+}
+
+.slideOut {
+  animation: $animationTime slideOut;
+  animation-fill-mode: forwards;
+}
+
+.slideUp {
+  animation: 1s slideUp;
+  animation-fill-mode: forwards;
+}
+
+.slideDown {
+  animation: 1s $delayTime slideDown;
+  animation-fill-mode: both;
+}
+
+.lineFold {
+  animation: $animationTime $delayTime lineFold;
+  animation-fill-mode: both;
+}
+
+.lineUnFold {
+  animation: $animationTime $delayTime lineUnFold;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-150px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(-150px);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(60px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-60px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes lineFold {
+  100% {
+    transform: translateX(0px);
+    width: 2px;
+  }
+
+  80% {
+    transform: translateX(0px);
+    width: 2px;
+    height: 30px;
+  }
+  60% {
+    transform: translateX($translate);
+    width: 2px;
+    height: 30px;
+  }
+
+  20% {
+    transform: translateX($translate) rotate(90deg);
+    width: 2px;
+    height: 30px;
+  }
+
+  0% {
+    transform: translateX($translate) rotate(90deg);
+    width: 16px;
+    height: 30px;
+    cursor: pointer;
+  }
+}
+
+@keyframes lineUnFold {
+  0% {
+    transform: translateX(0px);
+    width: 2px;
+  }
+
+  40% {
+    transform: translateX(0px);
+    width: 2px;
+    height: 30px;
+  }
+  60% {
+    transform: translateX($translate);
+    width: 2px;
+    height: 30px;
+  }
+
+  80% {
+    transform: translateX($translate) rotate(90deg);
+    width: 2px;
+    height: 30px;
+  }
+
+  100% {
+    transform: translateX($translate) rotate(90deg);
+    width: 16px;
+    height: 30px;
+    cursor: pointer;
+  }
+}
