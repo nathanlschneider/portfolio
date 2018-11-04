@@ -14,7 +14,8 @@ const app = (function() {
   let lastName = document.getElementById('lastName');
   let menu = document.getElementById('menu');
   let about = document.getElementById('about');
-  let links = document.querySelector('linkWrapper');
+  let linkItems = document.querySelectorAll('.linkItem');
+  let underlines = document.querySelectorAll('.underline');
 
   let logoPos = logo.getBoundingClientRect();
   logoPos = logo.getBoundingClientRect();
@@ -55,4 +56,41 @@ const app = (function() {
   line.addEventListener('click', e => {
     menu.classList.toggle('dropMenu');
   });
+
+  Array.from(linkItems).forEach(item =>
+    item.addEventListener('mouseover', e => {
+      if (e.target.children.length) {
+        e.target.children[0].classList.add('growLine');
+      }
+    })
+  );
+
+  Array.from(linkItems).forEach(item =>
+    item.addEventListener('mouseleave', e => {
+      if (e.target.children['0'].classList[2] !== 'active') {
+        e.target.children[0].classList.remove('growLine');
+      }
+    })
+  );
+
+  Array.from(linkItems).forEach(item =>
+    item.addEventListener('click', e => {
+      clearActives();
+      e.target.children[0].classList.add('active');
+      shrinkRemainingLines();
+    })
+  );
+
+  function clearActives() {
+    Array.from(underlines).forEach(line => line.classList.remove('active'));
+  }
+    
+    function shrinkRemainingLines() {
+        Array.from(underlines).forEach(line => { 
+            if (line.classList.value.includes('active')) {
+            } else {
+                line.classList.remove('growLine');
+            };
+        });
+    }
 })();

@@ -8,6 +8,7 @@ html {
   background-color: white;
 }
 body {
+  overflow: hidden;
   margin: 0;
   background-color: #232323;
   width: 100vw;
@@ -72,19 +73,34 @@ nav {
   .linkWrapper {
     display: flex;
     margin: 0 60px 0 0;
+    //background-color: green;
 
     div {
       font-size: 18px;
       font-weight: 300;
-      padding: 20px;
+      padding: 0 20px 0 20px;
       cursor: pointer;
       transition: 0.8s;
+      //background-color: red;
     }
-
-    div:hover {
+    .underline {
+      background-color: #232323;
+      height: 2px;
+      transform: scaleX(0) translateY(4px);
+      transition: 0.5s;
     }
   }
 }
+
+.growLine {
+  transform: scaleX(1) translateY(4px) !important;
+}
+
+.active {
+  background-color: hotpink !important;
+  transition: none !important;
+}
+
 section {
   height: 100vh;
 }

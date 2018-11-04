@@ -4,6 +4,7 @@ html {
 }
 
 body {
+  overflow: hidden;
   margin: 0;
   background-color: #232323;
   width: 100vw;
@@ -97,10 +98,30 @@ nav .linkWrapper {
 nav .linkWrapper div {
   font-size: 18px;
   font-weight: 300;
-  padding: 20px;
+  padding: 0 20px 0 20px;
   cursor: pointer;
   -webkit-transition: 0.8s;
   transition: 0.8s;
+}
+
+nav .linkWrapper .underline {
+  background-color: #232323;
+  height: 2px;
+  -webkit-transform: scaleX(0) translateY(4px);
+          transform: scaleX(0) translateY(4px);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.growLine {
+  -webkit-transform: scaleX(1) translateY(4px) !important;
+          transform: scaleX(1) translateY(4px) !important;
+}
+
+.active {
+  background-color: hotpink !important;
+  -webkit-transition: none !important;
+  transition: none !important;
 }
 
 section {
