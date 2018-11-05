@@ -1,12 +1,11 @@
 # Portfolio
-
 This site was built using
 
-# Frontend
+## Frontend
 - HTML5
 - SCSS(CSS3)
 - Javascript
 
-# Backend
+## Backend
 - Node.js
 - Express.js
