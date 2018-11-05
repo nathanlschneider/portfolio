@@ -49,7 +49,6 @@ const app = (function() {
       line.classList.add('lineUnFold');
       name.classList.add('slideOut');
       nav.classList.add('shrinkNavBar');
-      links.style.opacity = 1;
     }
   });
 

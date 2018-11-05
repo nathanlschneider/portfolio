@@ -129,6 +129,25 @@ nav .linkWrapper .underline {
 
 section {
   height: 100vh;
+  width: 100vw;
+}
+
+section:nth-of-type(2) {
+  height: 200vw;
+  background: #232323;
+  background: linear-gradient(165deg, #232323 0%, #232323 10%, #232323 15%, #232323 22%, #393939 32%, #494848 39%, #626060 50%, #6f6d6d 56%, #817f7f 60%, #a5a2a2 68%, #c5c1c1 75%, #e9e4e4 83%, snow 88%, white 92%, white 93%, white 97%);
+}
+
+section:nth-of-type(3) {
+  height: calc(100vh + 200px);
+  background: #833ab4;
+  background: linear-gradient(41deg, #833ab4 0%, #a44096 24%, #ce496f 62%, #fc5245 100%);
+}
+
+footer {
+  width: 100vw;
+  height: 200px;
+  background-color: #232323;
 }
 
 .bar {
@@ -402,6 +421,34 @@ section {
     width: 16px;
     height: 30px;
     cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .linkWrapper {
+    display: none;
+    margin: 0 60px 0 0;
+  }
+  .linkWrapper div {
+    display: none;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 0 20px 0 20px;
+    cursor: pointer;
+    -webkit-transition: 0.8s;
+    transition: 0.8s;
+  }
+  .linkWrapper .underline {
+    display: none;
+    position: relative;
+    background-color: #232323;
+    height: 3px;
+    -webkit-transform: scaleX(0) translateY(4px);
+            transform: scaleX(0) translateY(4px);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-box-shadow: 1px 1px 1px #5c5c5c;
+            box-shadow: 1px 1px 1px #5c5c5c;
   }
 }
 /*# sourceMappingURL=main.css.map */
