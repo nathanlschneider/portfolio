@@ -1,0 +1,53 @@
+@import 'variables';
+
+.growLine {
+  transform: scaleX(1) translateY(4px) !important;
+}
+
+.active {
+  //   background-color: hotpink !important;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(252, 82, 69, 1) 100%);
+  //transition: none !important;
+}
+
+.bar {
+  width: 2px;
+  //height: 45px;
+  background-color: #000000;
+}
+
+.slideIn {
+  animation: $animationTime 0.7s slideIn;
+  animation-fill-mode: both;
+}
+
+.slideInAndDelay {
+  animation: $animationTime 1.2s slideIn;
+  animation-fill-mode: both;
+}
+
+.slideOut {
+  animation: $animationTime slideOut;
+  animation-fill-mode: forwards;
+}
+
+.slideUp {
+  animation: 1s slideUp;
+  animation-fill-mode: forwards;
+}
+
+.slideDown {
+  animation: 1s $delayTime slideDown;
+  animation-fill-mode: both;
+}
+
+.lineFold {
+  animation: $animationTime $delayTime lineFold;
+  animation-fill-mode: both;
+}
+
+.lineUnFold {
+  animation: $animationTime $delayTime lineUnFold;
+  animation-fill-mode: forwards;
+}

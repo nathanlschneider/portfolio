@@ -1,0 +1,107 @@
+nav {
+  position: fixed;
+  width: 100vw;
+  font-family: 'Roboto', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: silver;
+  z-index: 1;
+  overflow: hidden;
+  -webkit-box-shadow: 1px 0px 10px #232323;
+          box-shadow: 1px 0px 10px #232323;
+}
+
+nav .logoWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto 0 60px;
+}
+
+nav #logo {
+  font-size: 45px;
+  z-index: 4;
+}
+
+nav #cover {
+  width: 150px;
+  height: 45px;
+  background-color: silver;
+  position: absolute;
+  z-index: 3;
+}
+
+nav #line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: initial;
+      -ms-flex-align: initial;
+          align-items: initial;
+  height: 42px;
+  width: 2px;
+  margin: 10px;
+  z-index: 10;
+}
+
+nav #name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 2;
+}
+
+nav #name span {
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+nav .linkWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 60px 0 0;
+}
+
+nav .linkWrapper div {
+  font-size: 18px;
+  font-weight: 300;
+  padding: 0 20px 0 20px;
+  cursor: pointer;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+nav .linkWrapper .underline {
+  position: relative;
+  background-color: #232323;
+  height: 3px;
+  -webkit-transform: scaleX(0) translateY(4px);
+          transform: scaleX(0) translateY(4px);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-box-shadow: 1px 1px 1px #5c5c5c;
+          box-shadow: 1px 1px 1px #5c5c5c;
+}
+/*# sourceMappingURL=nav.css.map */

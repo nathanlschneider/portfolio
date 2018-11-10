@@ -1,0 +1,65 @@
+.growLine {
+  -webkit-transform: scaleX(1) translateY(4px) !important;
+          transform: scaleX(1) translateY(4px) !important;
+}
+
+.active {
+  background: #833ab4;
+  background: -webkit-gradient(linear, left top, right top, from(#833ab4), to(#fc5245));
+  background: linear-gradient(90deg, #833ab4 0%, #fc5245 100%);
+}
+
+.bar {
+  width: 2px;
+  background-color: #000000;
+}
+
+.slideIn {
+  -webkit-animation: 1s 0.7s slideIn;
+          animation: 1s 0.7s slideIn;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.slideInAndDelay {
+  -webkit-animation: 1s 1.2s slideIn;
+          animation: 1s 1.2s slideIn;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.slideOut {
+  -webkit-animation: 1s slideOut;
+          animation: 1s slideOut;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.slideUp {
+  -webkit-animation: 1s slideUp;
+          animation: 1s slideUp;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.slideDown {
+  -webkit-animation: 1s 300ms slideDown;
+          animation: 1s 300ms slideDown;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.lineFold {
+  -webkit-animation: 1s 300ms lineFold;
+          animation: 1s 300ms lineFold;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.lineUnFold {
+  -webkit-animation: 1s 300ms lineUnFold;
+          animation: 1s 300ms lineUnFold;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+/*# sourceMappingURL=class.css.map */
