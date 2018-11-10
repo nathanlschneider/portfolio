@@ -1,9 +1,8 @@
+@import 'variables';
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
-$animationTime: 1s;
-$delayTime: 300ms;
-$translate: 15px;
-$navHeight: 50px;
-
+@import 'nav.scss';
+@import 'class';
+@import 'animation';
 
 html {
   background-color: white;
@@ -16,103 +15,15 @@ body {
   height: 100vh;
 }
 
-nav {
-  position: fixed;
-  width: 100vw;
-  font-family: 'Roboto', sans-serif;
-  display: flex;
-  height: $navHeight;
-  justify-content: center;
-  align-items: center;
-  background-color: silver;
-  z-index: 1;
-  overflow: hidden;
-
-  .logoWrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto 0 60px;
-  }
-
-  #logo {
-    font-size: 45px;
-    z-index: 4;
-    //background-color: red;
-    //position: fixed;
-  }
-
-  #cover {
-    width: 150px;
-    height: 45px;
-    background-color: silver;
-    position: absolute;
-    z-index: 3;
-  }
-
-  #line {
-    display: flex;
-    justify-content: space-between;
-    align-items: initial;
-    height: 42px;
-    width: 2px;
-    margin: 10px;
-    z-index: 10;
-  }
-
-  #name {
-    display: flex;
-    flex-direction: column;
-    z-index: 2;
-  }
-
-  #name span {
-    font-size: 18px;
-    letter-spacing: 2px;
-  }
-
-  .linkWrapper {
-    display: flex;
-    margin: 0 60px 0 0;
-    //background-color: green;
-
-    div {
-      font-size: 18px;
-      font-weight: 300;
-      padding: 0 20px 0 20px;
-      cursor: pointer;
-      transition: 0.8s;
-      //background-color: red;
-    }
-    .underline {
-      position: relative;
-      background-color: #232323;
-      height: 3px;
-      transform: scaleX(0) translateY(4px);
-      transition: all 0.5s;
-      box-shadow: 1px 1px 1px #5c5c5c;
-    }
-  }
-}
-
-.growLine {
-  transform: scaleX(1) translateY(4px) !important;
-}
-
-.active {
-  //   background-color: hotpink !important;
-  background: rgb(131, 58, 180);
-  background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(252, 82, 69, 1) 100%);
-  //transition: none !important;
-}
-
 section {
   height: 100vh;
   width: 100vw;
 }
 
 section:nth-of-type(1) {
+ 
 }
+
 section:nth-of-type(2) {
   height: 200vw;
   background: rgb(35, 35, 35);
@@ -147,179 +58,31 @@ section:nth-of-type(3) {
     rgba(206, 73, 111, 1) 62%,
     rgba(252, 82, 69, 1) 100%
   );
+
+   #corner {
+    position: fixed;
+    top: 1000px;
+    right: 0px;
+    background-color: #ffffff;
+    height: 60px;
+    width: 60px;
+    background: linear-gradient(45deg, grey 10%, silver 25%, grey 49%, #787878 1%, lightgrey 50%);
+    box-shadow: 0px 6px 9px 1px #23232377;
+    div {
+      @import url('https://fonts.googleapis.com/css?family=Pacifico');
+      font-family: 'Pacifico', cursive;
+      position: absolute;
+      font-size: 24px;
+
+      top: 1px;
+      left: 30px;
+      transform: rotate(45deg);
+    }
+  }
 }
 
 footer {
   width: 100vw;
   height: 200px;
   background-color: #232323;
-}
-.bar {
-  width: 2px;
-  //height: 45px;
-  background-color: #000000;
-}
-
-.slideIn {
-  animation: $animationTime 0.7s slideIn;
-  animation-fill-mode: both;
-}
-
-.slideInAndDelay {
-  animation: $animationTime 1.2s slideIn;
-  animation-fill-mode: both;
-}
-
-.slideOut {
-  animation: $animationTime slideOut;
-  animation-fill-mode: forwards;
-}
-
-.slideUp {
-  animation: 1s slideUp;
-  animation-fill-mode: forwards;
-}
-
-.slideDown {
-  animation: 1s $delayTime slideDown;
-  animation-fill-mode: both;
-}
-
-.lineFold {
-  animation: $animationTime $delayTime lineFold;
-  animation-fill-mode: both;
-}
-
-.lineUnFold {
-  animation: $animationTime $delayTime lineUnFold;
-  animation-fill-mode: forwards;
-}
-
-@keyframes slideIn {
-  0% {
-    transform: translateX(-150px);
-  }
-
-  100% {
-    transform: translateX(0px);
-  }
-}
-
-@keyframes slideOut {
-  0% {
-    transform: translateX(0px);
-  }
-
-  100% {
-    transform: translateX(-150px);
-  }
-}
-
-@keyframes slideUp {
-  0% {
-    transform: translateY(60px);
-  }
-
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-@keyframes slideDown {
-  0% {
-    transform: translateY(-60px);
-  }
-
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-@keyframes lineFold {
-  100% {
-    transform: translateX(0px);
-    width: 2px;
-  }
-
-  80% {
-    transform: translateX(0px);
-    width: 2px;
-    height: 30px;
-  }
-  60% {
-    transform: translateX($translate);
-    width: 2px;
-    height: 30px;
-  }
-
-  20% {
-    transform: translateX($translate) rotate(90deg);
-    width: 2px;
-    height: 30px;
-  }
-
-  0% {
-    transform: translateX($translate) rotate(90deg);
-    width: 16px;
-    height: 30px;
-    cursor: pointer;
-  }
-}
-
-@keyframes lineUnFold {
-  0% {
-    transform: translateX(0px);
-    width: 2px;
-  }
-
-  40% {
-    transform: translateX(0px);
-    width: 2px;
-    height: 30px;
-  }
-  60% {
-    transform: translateX($translate);
-    width: 2px;
-    height: 30px;
-  }
-
-  80% {
-    transform: translateX($translate) rotate(90deg);
-    width: 2px;
-    height: 30px;
-  }
-
-  100% {
-    transform: translateX($translate) rotate(90deg);
-    width: 16px;
-    height: 30px;
-    cursor: pointer;
-  }
-}
-
-@media only screen and (max-width: 600px) {
- .linkWrapper {
-    display: none;
-    margin: 0 60px 0 0;
-    //background-color: green;
-
-    div {
-        display: none;
-      font-size: 18px;
-      font-weight: 300;
-      padding: 0 20px 0 20px;
-      cursor: pointer;
-      transition: 0.8s;
-      //background-color: red;
-    }
-    .underline {
-        display: none;
-      position: relative;
-      background-color: #232323;
-      height: 3px;
-      transform: scaleX(0) translateY(4px);
-      transition: all 0.5s;
-      box-shadow: 1px 1px 1px #5c5c5c;
-    }
-  }
 }

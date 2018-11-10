@@ -1,16 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400");
-html {
-  background-color: white;
-}
-
-body {
-  overflow-x: hidden;
-  margin: 0;
-  background-color: #232323;
-  width: 100vw;
-  height: 100vh;
-}
-
+@import url("https://fonts.googleapis.com/css?family=Pacifico");
 nav {
   position: fixed;
   width: 100vw;
@@ -28,6 +17,8 @@ nav {
   background-color: silver;
   z-index: 1;
   overflow: hidden;
+  -webkit-box-shadow: 1px 0px 10px #232323;
+          box-shadow: 1px 0px 10px #232323;
 }
 
 nav .logoWrapper {
@@ -125,29 +116,6 @@ nav .linkWrapper .underline {
   background: #833ab4;
   background: -webkit-gradient(linear, left top, right top, from(#833ab4), to(#fc5245));
   background: linear-gradient(90deg, #833ab4 0%, #fc5245 100%);
-}
-
-section {
-  height: 100vh;
-  width: 100vw;
-}
-
-section:nth-of-type(2) {
-  height: 200vw;
-  background: #232323;
-  background: linear-gradient(165deg, #232323 0%, #232323 10%, #232323 15%, #232323 22%, #393939 32%, #494848 39%, #626060 50%, #6f6d6d 56%, #817f7f 60%, #a5a2a2 68%, #c5c1c1 75%, #e9e4e4 83%, snow 88%, white 92%, white 93%, white 97%);
-}
-
-section:nth-of-type(3) {
-  height: calc(100vh + 200px);
-  background: #833ab4;
-  background: linear-gradient(41deg, #833ab4 0%, #a44096 24%, #ce496f 62%, #fc5245 100%);
-}
-
-footer {
-  width: 100vw;
-  height: 200px;
-  background-color: #232323;
 }
 
 .bar {
@@ -450,5 +418,62 @@ footer {
     -webkit-box-shadow: 1px 1px 1px #5c5c5c;
             box-shadow: 1px 1px 1px #5c5c5c;
   }
+}
+
+html {
+  background-color: white;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  background-color: #232323;
+  width: 100vw;
+  height: 100vh;
+}
+
+section {
+  height: 100vh;
+  width: 100vw;
+}
+
+section:nth-of-type(2) {
+  height: 200vw;
+  background: #232323;
+  background: linear-gradient(165deg, #232323 0%, #232323 10%, #232323 15%, #232323 22%, #393939 32%, #494848 39%, #626060 50%, #6f6d6d 56%, #817f7f 60%, #a5a2a2 68%, #c5c1c1 75%, #e9e4e4 83%, snow 88%, white 92%, white 93%, white 97%);
+}
+
+section:nth-of-type(3) {
+  height: calc(100vh + 200px);
+  background: #833ab4;
+  background: linear-gradient(41deg, #833ab4 0%, #a44096 24%, #ce496f 62%, #fc5245 100%);
+}
+
+section:nth-of-type(3) #corner {
+  position: fixed;
+  top: 1000px;
+  right: 0px;
+  background-color: #ffffff;
+  height: 60px;
+  width: 60px;
+  background: linear-gradient(45deg, grey 10%, silver 25%, grey 49%, #787878 1%, lightgrey 50%);
+  -webkit-box-shadow: 0px 6px 9px 1px #23232377;
+          box-shadow: 0px 6px 9px 1px #23232377;
+}
+
+section:nth-of-type(3) #corner div {
+  font-family: 'Pacifico', cursive;
+  position: absolute;
+  font-size: 24px;
+  top: 1px;
+  left: 30px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+footer {
+  width: 100vw;
+  height: 200px;
+  background-color: #232323;
 }
 /*# sourceMappingURL=main.css.map */
