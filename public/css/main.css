@@ -437,6 +437,60 @@ section {
   width: 100vw;
 }
 
+section:nth-of-type(1) {
+  color: silver;
+  font-size: 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: column;
+      -ms-flex: column;
+          flex: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section:nth-of-type(1) svg {
+  fill: #927d42;
+  height: 200px;
+  -webkit-transform: translateY(-150px);
+          transform: translateY(-150px);
+}
+
+section:nth-of-type(1) #greetingWrapper {
+  font-family: 'Roboto', serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 50vh;
+}
+
+section:nth-of-type(1) #greetingWrapper span:nth-child(1) {
+  font-weight: 300;
+  font-size: 3rem;
+  letter-spacing: 10px;
+  color: #8e8e90;
+}
+
+section:nth-of-type(1) #greetingWrapper span:nth-child(2) {
+  font-weight: 800;
+}
+
 section:nth-of-type(2) {
   height: 200vw;
   background: #232323;
