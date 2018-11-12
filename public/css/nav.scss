@@ -28,15 +28,18 @@ nav {
       top: 5px;
       right: -8px;
       fill: $dark-grey;
+      transition: all .5s;
+    }
+    svg:hover {
+      fill: $dark-gold;
     }
     
-
-
     font-size: 45px;
     z-index: 4;
     //background-color: red;
     //position: fixed;
   }
+
 
   #cover {
     width: 150px;

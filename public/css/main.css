@@ -46,6 +46,12 @@ nav #logo svg {
   top: 5px;
   right: -8px;
   fill: #231F20;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+nav #logo svg:hover {
+  fill: #8E793E;
 }
 
 nav #cover {
@@ -618,6 +624,12 @@ section:nth-of-type(1) #chevron {
           animation-direction: alternate;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
+  cursor: pointer;
+}
+
+section:nth-of-type(1) #chevron:focus {
+  -webkit-box-shadow: #ffffff;
+          box-shadow: #ffffff;
 }
 
 section:nth-of-type(1) .bar {
@@ -647,7 +659,7 @@ section:nth-of-type(1) .bar:nth-of-type(2) {
             transform: translateY(0px);
     opacity: .2;
   }
-  100% {
+  40%, 100% {
     -webkit-transform: translateY(50px);
             transform: translateY(50px);
     opacity: 1;
@@ -660,7 +672,7 @@ section:nth-of-type(1) .bar:nth-of-type(2) {
             transform: translateY(0px);
     opacity: .2;
   }
-  100% {
+  40%, 100% {
     -webkit-transform: translateY(50px);
             transform: translateY(50px);
     opacity: 1;

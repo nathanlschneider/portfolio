@@ -1,160 +1,160 @@
 @import 'variables';
 
 @keyframes flipIn {
-  0% {
-    transform: translateY(-20px) scale(.9);
-    opacity: 0;
-  }
+    0% {
+        transform: translateY(-20px) scale(0.9);
+        opacity: 0;
+    }
 
-  100% {
-    transform: translateY(0) scale(1);
-    opacity: 1;
-  }
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
 }
 
 @keyframes fortyFiveIn {
-  0% {
-    transform: translateX(-25px) translateY(25px) scale(0.9);
-    opacity: 0;
-  }
+    0% {
+        transform: translateX(-25px) translateY(25px) scale(0.9);
+        opacity: 0;
+    }
 
-  5% {
-  transform: translateX(-10px) translateY(10px) scale(0.9);
+    5% {
+        transform: translateX(-10px) translateY(10px) scale(0.9);
 
-    opacity: 1;
-  }
+        opacity: 1;
+    }
 
-  100% {
-    transform: translateX(0px) translateY(0px) scale(1);
-    opacity: 1;
-  }
+    100% {
+        transform: translateX(0px) translateY(0px) scale(1);
+        opacity: 1;
+    }
 }
 
 @keyframes slideIn {
-  0% {
-    transform: translateX(-150px);
-  }
+    0% {
+        transform: translateX(-150px);
+    }
 
-  100% {
-    transform: translateX(0px);
-  }
+    100% {
+        transform: translateX(0px);
+    }
 }
 
 @keyframes slideOut {
-  0% {
-    transform: translateX(0px);
-  }
+    0% {
+        transform: translateX(0px);
+    }
 
-  100% {
-    transform: translateX(-150px);
-  }
+    100% {
+        transform: translateX(-150px);
+    }
 }
 
 @keyframes slideUp {
-  0% {
-    transform: translateY(60px);
-  }
+    0% {
+        transform: translateY(60px);
+    }
 
-  100% {
-    transform: translateY(0px);
-  }
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 @keyframes slideDown {
-  0% {
-    transform: translateY(-60px);
-  }
+    0% {
+        transform: translateY(-60px);
+    }
 
-  100% {
-    transform: translateY(0px);
-  }
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 @keyframes lineFold {
-  100% {
-    transform: translateX(0px);
-    width: 2px;
-  }
+    100% {
+        transform: translateX(0px);
+        width: 2px;
+    }
 
-  80% {
-    transform: translateX(0px);
-    width: 2px;
-    height: 30px;
-  }
-  60% {
-    transform: translateX($translate);
-    width: 2px;
-    height: 30px;
-  }
+    80% {
+        transform: translateX(0px);
+        width: 2px;
+        height: 30px;
+    }
+    60% {
+        transform: translateX($translate);
+        width: 2px;
+        height: 30px;
+    }
 
-  20% {
-    transform: translateX($translate) rotate(90deg);
-    width: 2px;
-    height: 30px;
-  }
+    20% {
+        transform: translateX($translate) rotate(90deg);
+        width: 2px;
+        height: 30px;
+    }
 
-  0% {
-    transform: translateX($translate) rotate(90deg);
-    width: 16px;
-    height: 30px;
-    cursor: pointer;
-  }
+    0% {
+        transform: translateX($translate) rotate(90deg);
+        width: 16px;
+        height: 30px;
+        cursor: pointer;
+    }
 }
 
 @keyframes lineUnFold {
-  0% {
-    transform: translateX(0px);
-    width: 2px;
-  }
+    0% {
+        transform: translateX(0px);
+        width: 2px;
+    }
 
-  40% {
-    transform: translateX(0px);
-    width: 2px;
-    height: 30px;
-  }
-  60% {
-    transform: translateX($translate);
-    width: 2px;
-    height: 30px;
-  }
+    40% {
+        transform: translateX(0px);
+        width: 2px;
+        height: 30px;
+    }
+    60% {
+        transform: translateX($translate);
+        width: 2px;
+        height: 30px;
+    }
 
-  80% {
-    transform: translateX($translate) rotate(90deg);
-    width: 2px;
-    height: 30px;
-  }
+    80% {
+        transform: translateX($translate) rotate(90deg);
+        width: 2px;
+        height: 30px;
+    }
 
-  100% {
-    transform: translateX($translate) rotate(90deg);
-    width: 16px;
-    height: 30px;
-    cursor: pointer;
-  }
+    100% {
+        transform: translateX($translate) rotate(90deg);
+        width: 16px;
+        height: 30px;
+        cursor: pointer;
+    }
 }
 
 @media only screen and (max-width: 600px) {
-  .linkWrapper {
-    display: none;
-    margin: 0 60px 0 0;
-    //background-color: green;
+    .linkWrapper {
+        display: none;
+        margin: 0 60px 0 0;
+        //background-color: green;
 
-    div {
-      display: none;
-      font-size: 18px;
-      font-weight: 300;
-      padding: 0 20px 0 20px;
-      cursor: pointer;
-      transition: 0.8s;
-      //background-color: red;
+        div {
+            display: none;
+            font-size: 18px;
+            font-weight: 300;
+            padding: 0 20px 0 20px;
+            cursor: pointer;
+            transition: 0.8s;
+            //background-color: red;
+        }
+        .underline {
+            display: none;
+            position: relative;
+            background-color: #232323;
+            height: 3px;
+            transform: scaleX(0) translateY(4px);
+            transition: all 0.5s;
+            box-shadow: 1px 1px 1px #5c5c5c;
+        }
     }
-    .underline {
-      display: none;
-      position: relative;
-      background-color: #232323;
-      height: 3px;
-      transform: scaleX(0) translateY(4px);
-      transition: all 0.5s;
-      box-shadow: 1px 1px 1px #5c5c5c;
-    }
-  }
 }

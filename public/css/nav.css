@@ -44,6 +44,12 @@ nav #logo svg {
   top: 5px;
   right: -8px;
   fill: #231F20;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+nav #logo svg:hover {
+  fill: #8E793E;
 }
 
 nav #cover {

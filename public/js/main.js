@@ -18,9 +18,27 @@ const app = (function() {
   let underlines = document.querySelectorAll('.underline');
   let greeting = document.getElementById('greetingWrapper');
   let pageLogo = document.querySelectorAll('svg');
+  let chevron = document.getElementById('chevron');
   let logoPos = logo.getBoundingClientRect();
   logoPos = logo.getBoundingClientRect();
   cover.style.left = logoPos.right - 140 + 'px';
+
+
+  chevron.addEventListener('click', e => {
+    window.scrollTo({
+      top: window.innerHeight,
+      left: 0,
+      behavior: 'smooth'
+    });
+  })
+  
+  logo.addEventListener('click', e => { 
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  })
 
   window.addEventListener('resize', e => {
     logoPos = logo.getBoundingClientRect();

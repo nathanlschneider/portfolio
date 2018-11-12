@@ -29,7 +29,6 @@ section:nth-of-type(1) {
   justify-content: center;
   align-items: center;
 
-
   svg {
     fill: $dark-gold;
     position: relative;
@@ -75,6 +74,7 @@ section:nth-of-type(1) {
     span:nth-child(3) {
     }
   }
+
   #chevron {
     height: 400px;
     width: 400px;
@@ -86,8 +86,14 @@ section:nth-of-type(1) {
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-fill-mode: both;
+    cursor: pointer;
   }
-  
+
+  #chevron:focus {
+    box-shadow: #ffffff;
+  }
+
+
   .bar {
       width: 100px;
       height: 5px;
@@ -108,7 +114,7 @@ section:nth-of-type(1) {
     0% {transform: translateY(0px);
       opacity: .2;
     }
-    100%{
+    40%, 100%{
       transform: translateY(50px);
       opacity: 1;
     }
