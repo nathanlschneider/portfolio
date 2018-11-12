@@ -43,7 +43,7 @@ nav #logo svg {
   position: relative;
   top: 5px;
   right: -8px;
-  fill: #231F20;
+  fill: #777777;
   -webkit-transition: all .5s;
   transition: all .5s;
 }

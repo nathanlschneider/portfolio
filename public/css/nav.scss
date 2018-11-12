@@ -20,6 +20,7 @@ nav {
     margin: 0 auto 0 60px;
   }
   
+
   #logo {
     svg{
       height: 42px;
@@ -27,7 +28,7 @@ nav {
       position: relative;
       top: 5px;
       right: -8px;
-      fill: $dark-grey;
+      fill: #777777;
       transition: all .5s;
     }
     svg:hover {
