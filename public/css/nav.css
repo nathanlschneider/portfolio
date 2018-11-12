@@ -37,6 +37,15 @@ nav #logo {
   z-index: 4;
 }
 
+nav #logo svg {
+  height: 42px;
+  width: 42px;
+  position: relative;
+  top: 5px;
+  right: -8px;
+  fill: #232323;
+}
+
 nav #cover {
   width: 150px;
   height: 45px;

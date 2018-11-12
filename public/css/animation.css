@@ -1,3 +1,61 @@
+@-webkit-keyframes flipIn {
+  0% {
+    -webkit-transform: translateY(-20px) scale(0.9);
+            transform: translateY(-20px) scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) scale(1);
+            transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes flipIn {
+  0% {
+    -webkit-transform: translateY(-20px) scale(0.9);
+            transform: translateY(-20px) scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) scale(1);
+            transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fortyFiveIn {
+  0% {
+    -webkit-transform: translateX(-10px) translateY(10px) scale(0.9);
+            transform: translateX(-10px) translateY(10px) scale(0.9);
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(0px) translateY(0px) scale(1);
+            transform: translateX(0px) translateY(0px) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fortyFiveIn {
+  0% {
+    -webkit-transform: translateX(-10px) translateY(10px) scale(0.9);
+            transform: translateX(-10px) translateY(10px) scale(0.9);
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(0px) translateY(0px) scale(1);
+            transform: translateX(0px) translateY(0px) scale(1);
+    opacity: 1;
+  }
+}
+
 @-webkit-keyframes slideIn {
   0% {
     -webkit-transform: translateX(-150px);

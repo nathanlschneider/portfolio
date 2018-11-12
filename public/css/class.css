@@ -14,6 +14,13 @@
   background-color: #000000;
 }
 
+.flipIn {
+  -webkit-animation: 3s flipIn;
+          animation: 3s flipIn;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
 .slideIn {
   -webkit-animation: 1s 0.7s slideIn;
           animation: 1s 0.7s slideIn;
@@ -59,6 +66,13 @@
 .lineUnFold {
   -webkit-animation: 1s 300ms lineUnFold;
           animation: 1s 300ms lineUnFold;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.fortyFiveIn {
+  -webkit-animation: 60s fortyFiveIn;
+          animation: 60s fortyFiveIn;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }

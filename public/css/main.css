@@ -39,6 +39,15 @@ nav #logo {
   z-index: 4;
 }
 
+nav #logo svg {
+  height: 42px;
+  width: 42px;
+  position: relative;
+  top: 5px;
+  right: -8px;
+  fill: #232323;
+}
+
 nav #cover {
   width: 150px;
   height: 45px;
@@ -123,6 +132,13 @@ nav .linkWrapper .underline {
   background-color: #000000;
 }
 
+.flipIn {
+  -webkit-animation: 3s flipIn;
+          animation: 3s flipIn;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
 .slideIn {
   -webkit-animation: 1s 0.7s slideIn;
           animation: 1s 0.7s slideIn;
@@ -170,6 +186,71 @@ nav .linkWrapper .underline {
           animation: 1s 300ms lineUnFold;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+}
+
+.fortyFiveIn {
+  -webkit-animation: 60s fortyFiveIn;
+          animation: 60s fortyFiveIn;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes flipIn {
+  0% {
+    -webkit-transform: translateY(-20px) scale(0.9);
+            transform: translateY(-20px) scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) scale(1);
+            transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes flipIn {
+  0% {
+    -webkit-transform: translateY(-20px) scale(0.9);
+            transform: translateY(-20px) scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) scale(1);
+            transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fortyFiveIn {
+  0% {
+    -webkit-transform: translateX(-10px) translateY(10px) scale(0.9);
+            transform: translateX(-10px) translateY(10px) scale(0.9);
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(0px) translateY(0px) scale(1);
+            transform: translateX(0px) translateY(0px) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fortyFiveIn {
+  0% {
+    -webkit-transform: translateX(-10px) translateY(10px) scale(0.9);
+            transform: translateX(-10px) translateY(10px) scale(0.9);
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(0px) translateY(0px) scale(1);
+            transform: translateX(0px) translateY(0px) scale(1);
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes slideIn {
@@ -455,10 +536,13 @@ section:nth-of-type(1) {
 }
 
 section:nth-of-type(1) svg {
-  fill: #927d42;
+  fill: #b9ab65;
+  position: relative;
   height: 200px;
-  -webkit-transform: translateY(-150px);
-          transform: translateY(-150px);
+  margin-top: -300px;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+  opacity: 0;
 }
 
 section:nth-of-type(1) #greetingWrapper {
@@ -478,6 +562,7 @@ section:nth-of-type(1) #greetingWrapper {
           flex-direction: column;
   position: absolute;
   top: 50vh;
+  opacity: 0;
 }
 
 section:nth-of-type(1) #greetingWrapper span:nth-child(1) {

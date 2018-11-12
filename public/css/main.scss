@@ -29,11 +29,14 @@ section:nth-of-type(1) {
   justify-content: center;
   align-items: center;
 
-    svg {
-    fill: rgb(146, 125, 66) ;
-     height: 200px;
-     transform: translateY(-150px);
-    }
+  svg {
+    fill: rgb(185, 171, 101);
+    position: relative;
+    height: 200px;
+    margin-top: -300px;
+    transition: all 2s;
+    opacity: 0;
+  }
 
   #greetingWrapper {
     font-family: 'Roboto', serif;
@@ -44,10 +47,8 @@ section:nth-of-type(1) {
     flex-direction: column;
     position: absolute;
     top: 50vh;
+    opacity: 0;
 
-    span {
-      // text-shadow: 5px 5px 5px #000000dd;
-    }
     span:nth-child(1) {
       font-weight: 300;
       font-size: 3rem;

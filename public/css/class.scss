@@ -17,6 +17,11 @@
   background-color: #000000;
 }
 
+.flipIn {
+animation: 3s flipIn;
+animation-fill-mode: forwards;
+}
+
 .slideIn {
   animation: $animationTime 0.7s slideIn;
   animation-fill-mode: both;
@@ -49,5 +54,10 @@
 
 .lineUnFold {
   animation: $animationTime $delayTime lineUnFold;
+  animation-fill-mode: forwards;
+}
+
+.fortyFiveIn {
+  animation: 60s fortyFiveIn;
   animation-fill-mode: forwards;
 }

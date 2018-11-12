@@ -16,7 +16,8 @@ const app = (function() {
   let about = document.getElementById('about');
   let linkItems = document.querySelectorAll('.linkItem');
   let underlines = document.querySelectorAll('.underline');
-
+  let greeting = document.getElementById('greetingWrapper');
+  let pageLogo = document.querySelectorAll('svg');
   let logoPos = logo.getBoundingClientRect();
   logoPos = logo.getBoundingClientRect();
   cover.style.left = logoPos.right - 140 + 'px';
@@ -29,9 +30,11 @@ const app = (function() {
   window.addEventListener('load', e => {
     logoPos = logo.getBoundingClientRect();
     cover.style.left = logoPos.right - 140 + 'px';
-    logo.classList.add('slideDown');
-    line.classList.add('slideUp');
-    name.classList.add('slideIn');
+    // logo.classList.add('slideDown');
+    // line.classList.add('slideUp');
+    // name.classList.add('slideIn');
+    greeting.classList.add('fortyFiveIn');
+    pageLogo[1].classList.add('flipIn');
   });
 
   window.addEventListener('scroll', e => {
@@ -83,13 +86,13 @@ const app = (function() {
   function clearActives() {
     Array.from(underlines).forEach(line => line.classList.remove('active'));
   }
-    
-    function shrinkRemainingLines() {
-        Array.from(underlines).forEach(line => { 
-            if (line.classList.value.includes('active')) {
-            } else {
-                line.classList.remove('growLine');
-            };
-        });
-    }
+
+  function shrinkRemainingLines() {
+    Array.from(underlines).forEach(line => {
+      if (line.classList.value.includes('active')) {
+      } else {
+        line.classList.remove('growLine');
+      }
+    });
+  }
 })();
