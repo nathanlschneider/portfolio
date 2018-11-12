@@ -45,7 +45,7 @@ nav #logo svg {
   position: relative;
   top: 5px;
   right: -8px;
-  fill: #232323;
+  fill: #231F20;
 }
 
 nav #cover {
@@ -540,13 +540,29 @@ section:nth-of-type(1) {
 }
 
 section:nth-of-type(1) svg {
-  fill: #b9ab65;
+  fill: #8E793E;
   position: relative;
   height: 200px;
   margin-top: -300px;
   -webkit-transition: all 2s;
   transition: all 2s;
   opacity: 0;
+}
+
+section:nth-of-type(1) svg rect:nth-of-type(1) {
+  fill: #8E793E;
+}
+
+section:nth-of-type(1) svg rect:nth-of-type(2) {
+  fill: #AD974F;
+}
+
+section:nth-of-type(1) svg rect:nth-of-type(3) {
+  fill: #8E793E;
+}
+
+section:nth-of-type(1) svg rect:nth-of-type(4) {
+  fill: #AD974F;
 }
 
 section:nth-of-type(1) #greetingWrapper {
@@ -573,11 +589,82 @@ section:nth-of-type(1) #greetingWrapper span:nth-child(1) {
   font-weight: 300;
   font-size: 3rem;
   letter-spacing: 10px;
-  color: #8e8e90;
+  color: #787878;
 }
 
 section:nth-of-type(1) #greetingWrapper span:nth-child(2) {
   font-weight: 800;
+}
+
+section:nth-of-type(1) #chevron {
+  height: 400px;
+  width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 2s;
+  transition: 2s;
+  -webkit-animation: 3s bounce;
+          animation: 3s bounce;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+section:nth-of-type(1) .bar {
+  width: 100px;
+  height: 5px;
+}
+
+section:nth-of-type(1) .bar:nth-of-type(1) {
+  -webkit-transform: rotate(30deg) translateX(1px);
+          transform: rotate(30deg) translateX(1px);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  background-color: #8E793E;
+}
+
+section:nth-of-type(1) .bar:nth-of-type(2) {
+  -webkit-transform: rotate(-30deg) translateX(-1px);
+          transform: rotate(-30deg) translateX(-1px);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  background-color: #AD974F;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: .2;
+  }
+  100% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: .2;
+  }
+  100% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 1;
+  }
 }
 
 section:nth-of-type(2) {
