@@ -26,11 +26,13 @@
 
 @-webkit-keyframes fortyFiveIn {
   0% {
-    -webkit-transform: translateX(-10px) translateY(10px) scale(0.9);
-            transform: translateX(-10px) translateY(10px) scale(0.9);
+    -webkit-transform: translateX(-25px) translateY(25px) scale(0.9);
+            transform: translateX(-25px) translateY(25px) scale(0.9);
     opacity: 0;
   }
   5% {
+    -webkit-transform: translateX(-10px) translateY(10px) scale(0.9);
+            transform: translateX(-10px) translateY(10px) scale(0.9);
     opacity: 1;
   }
   100% {
@@ -42,11 +44,13 @@
 
 @keyframes fortyFiveIn {
   0% {
-    -webkit-transform: translateX(-10px) translateY(10px) scale(0.9);
-            transform: translateX(-10px) translateY(10px) scale(0.9);
+    -webkit-transform: translateX(-25px) translateY(25px) scale(0.9);
+            transform: translateX(-25px) translateY(25px) scale(0.9);
     opacity: 0;
   }
   5% {
+    -webkit-transform: translateX(-10px) translateY(10px) scale(0.9);
+            transform: translateX(-10px) translateY(10px) scale(0.9);
     opacity: 1;
   }
   100% {
