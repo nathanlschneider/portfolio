@@ -1,9 +1,9 @@
 @import 'colors';
 @import 'variables';
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
-@import 'nav.scss';
+@import 'nav';
 @import 'class';
 @import 'animation';
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
 
 html {
   background-color: white;
